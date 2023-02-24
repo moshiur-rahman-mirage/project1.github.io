@@ -13,11 +13,13 @@ body{
 *{
     box-sizing: border-box;
 
+
 }
 
 .container{
     display: flex;
     width: 90vw;
+    
 }
 
 .panel {
@@ -44,13 +46,25 @@ body{
 
 .panel.active{
     flex: 5;
+    
 }
 
 .panel.active h3 {
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s ;
+   
+}
+.panel {
+    border-radius: 50px;
 }
 
 
-@media (max-width:480px) {
-    
+@media (max-width:560px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(4){
+        display: none;
+    }
 }
